@@ -66,7 +66,7 @@ def check_date(data):
     c.execute("SELECT * FROM torrents WHERE datetime(date)<=datetime(?)",
               (date,))
     lc = len(c.fetchall())
-    print("Length fetch: %s" % lc)
+    # print("Length fetch: %s" % lc)
     return lc == 0
 
 

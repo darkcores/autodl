@@ -1,0 +1,12 @@
+[Unit]
+Description=Auto download rss feed torrents
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/jorrit/autodl
+ExecStart=/home/jorrit/autodl/env/bin/python autodl.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
